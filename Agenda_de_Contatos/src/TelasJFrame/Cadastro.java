@@ -168,6 +168,9 @@ public class Cadastro extends JFrame {
 					OperacoesNoBancoDeDados salvarDados = new OperacoesNoBancoDeDados();
 					salvarDados.Cadastrar(objeto);
 					
+					//  fechar o formulário após salvar os dados
+					dispose();
+					
 				}catch (Exception trata) {
 					JOptionPane.showMessageDialog(null, "Erro ao salvar dados no banco");
 				}

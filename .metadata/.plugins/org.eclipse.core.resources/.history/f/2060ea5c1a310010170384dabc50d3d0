@@ -14,9 +14,6 @@ import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
 
 public class Pesquisa extends JFrame {
 
@@ -24,7 +21,6 @@ public class Pesquisa extends JFrame {
 	private JPanel contentPane;
 	private JTextField txtConsulta;
 	private JTextField textQuantidadeDeItens;
-	private JTable tableAgenda;
 
 	/**
 	 * Launch the application.
@@ -61,7 +57,7 @@ public class Pesquisa extends JFrame {
 		setContentPane(contentPane);
 		
 		JButton btnNovo = new JButton("Novo");
-		btnNovo.setBounds(553, 105, 223, 93);
+		btnNovo.setBounds(535, 48, 223, 93);
 		btnNovo.setIcon(new ImageIcon(Pesquisa.class.getResource("/Imagens/novo.png")));
 		btnNovo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -78,38 +74,19 @@ public class Pesquisa extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("Digite para pesquisar");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		lblNewLabel.setBounds(10, 34, 260, 57);
+		lblNewLabel.setBounds(25, 34, 260, 57);
 		contentPane.add(lblNewLabel);
 		
 		txtConsulta = new JTextField();
 		txtConsulta.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		txtConsulta.setBounds(10, 101, 384, 40);
+		txtConsulta.setBounds(25, 87, 384, 40);
 		contentPane.add(txtConsulta);
 		txtConsulta.setColumns(10);
 		
 		textQuantidadeDeItens = new JTextField();
 		textQuantidadeDeItens.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		textQuantidadeDeItens.setColumns(10);
-		textQuantidadeDeItens.setBounds(10, 158, 384, 40);
+		textQuantidadeDeItens.setBounds(25, 148, 384, 40);
 		contentPane.add(textQuantidadeDeItens);
-		
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(10, 208, 766, 245);
-		contentPane.add(scrollPane);
-		
-		tableAgenda = new JTable();
-		scrollPane.setViewportView(tableAgenda);
-		tableAgenda.setModel(new DefaultTableModel(
-			new Object[][] {
-			},
-			new String[] {
-				"ID", "Nome", "Telefone", "Email", "Endere\u00E7o", "Nascimento", "Sexo"
-			}
-		));
-	}
-	
-	// Método para carregar as informações
-	public void carregarItens() {
-		
 	}
 }

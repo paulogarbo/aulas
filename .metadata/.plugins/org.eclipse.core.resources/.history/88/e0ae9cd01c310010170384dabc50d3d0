@@ -106,10 +106,6 @@ public class Pesquisa extends JFrame {
 				"ID", "Nome", "Telefone", "Email", "Endere\u00E7o", "Nascimento", "Sexo"
 			}
 		));
-	}
-	
-	// Método para carregar as informações
-	public void carregarItens() {
 		
 	}
 }

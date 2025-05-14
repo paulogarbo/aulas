@@ -49,14 +49,10 @@ public class OperacoesNoBancoDeDados {
 	}
 	
 	public List<DadosAgenda> listarItens() {
-		try {
-			List<DadosAgenda> lista = new ArrayList<DadosAgenda>();
-			
-			String sqlBancoDados = "SELECT * FROM tabela_cadastro";
-			PreparedStatement lerInformacao = conexao.prepareStatement(sqlBancoDados);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+		List<DadosAgenda> lista = new ArrayList<DadosAgenda>();
+		
+		String sqlBancoDados = "SELECT * FROM tabela_cadastro";
+		PreparedStatement lerInformacao = conexao.prepareStatement(sqlBancoDados);
 	}
 }
