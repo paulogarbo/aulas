@@ -107,7 +107,7 @@ public class Pesquisa extends JFrame {
 			new Object[][] {
 			},
 			new String[] {
-				"ID", "Nome", "Telefone", "Email", "Endere\u00E7o", "Nascimento", "Filho"
+				"ID", "Nome", "Telefone", "Email", "Endere\u00E7o", "Nascimento", "Sexo"
 			}
 		));
 		

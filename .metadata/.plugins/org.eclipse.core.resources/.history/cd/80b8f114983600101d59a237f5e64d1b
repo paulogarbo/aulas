@@ -107,31 +107,16 @@ public class Pesquisa extends JFrame {
 			new Object[][] {
 			},
 			new String[] {
-				"ID", "Nome", "Telefone", "Email", "Endere\u00E7o", "Nascimento", "Filho"
+				"ID", "Nome", "Telefone", "Email", "Endere\u00E7o", "Nascimento", "Sexo"
 			}
 		));
-		
-		carregarItens();	}
+	}
 	
 	// Método para carregar as informações
 	public void carregarItens() {
 		OperacoesNoBancoDeDados itens = new OperacoesNoBancoDeDados();
 		List<DadosAgenda> itensLista = itens.listarItens();
-		// Criando objeto que vai passar os dados da lista para a tabela
-		DefaultTableModel dados = (DefaultTableModel) tableAgenda.getModel();
 		
-		dados.setRowCount(0);
-		
-		for(DadosAgenda linha : itensLista) {
-			dados.addRow(new Object[] {
-					linha.getId(),
-					linha.getNome(),
-					linha.getTelefone(),
-					linha.getEmail(),
-					linha.getEndereco(),
-					linha.getNascimento(),
-					linha.getFilhos(),
-			});
-		}
+		DefaultTableModel dados = tableAgenda.getModel();
 	}
 }

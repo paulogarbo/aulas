@@ -68,16 +68,10 @@ public class OperacoesNoBancoDeDados {
 				linha.setEndereco(resultado.getString("endereco"));
 				linha.setNascimento(resultado.getString("nascimento"));
 				linha.setFilhos(resultado.getString("filhos"));
-				
-				lista.add(linha);
 			}
-			
-			return lista;
-			
 		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(null, "Erro ao carregar os dados: " + e);
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		
-		return null;
 	}
 }

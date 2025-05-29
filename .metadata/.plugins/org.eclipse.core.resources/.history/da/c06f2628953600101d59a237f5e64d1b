@@ -77,7 +77,5 @@ public class OperacoesNoBancoDeDados {
 		} catch (SQLException e) {
 			JOptionPane.showMessageDialog(null, "Erro ao carregar os dados: " + e);
 		}
-		
-		return null;
 	}
 }

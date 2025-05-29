@@ -61,23 +61,10 @@ public class OperacoesNoBancoDeDados {
 			// while - enquanto existir um próximo item
 			while(resultado.next()) {
 				DadosAgenda linha = new DadosAgenda();
-				linha.setId(resultado.getInt("id"));
-				linha.setNome(resultado.getString("nome"));
-				linha.setTelefone(resultado.getString("telefone"));
-				linha.setEmail(resultado.getString("email"));
-				linha.setEndereco(resultado.getString("endereco"));
-				linha.setNascimento(resultado.getString("nascimento"));
-				linha.setFilhos(resultado.getString("filhos"));
-				
-				lista.add(linha);
 			}
-			
-			return lista;
-			
 		} catch (SQLException e) {
-			JOptionPane.showMessageDialog(null, "Erro ao carregar os dados: " + e);
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		
-		return null;
 	}
 }
